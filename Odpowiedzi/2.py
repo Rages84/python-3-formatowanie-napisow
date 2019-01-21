@@ -13,10 +13,10 @@ Twoje *stan_początkowy* zł przez *czas* lata na lokacie *oprocentowanie* % uro
 
 start = float(input("Stan początkowy konta wynosi: "))
 
-#np. stopa oprocenotwania 6% = 0.06
+#np. stopa oprocenotwania 6% = 6, wpisujemy tylko liczbę bez znaku %
 rate = float(input("Stopa oprocenotowania w skali roku: "))
 
 n = int(input("Liczba lat na lokacie: "))
-end = start*(1 + rate*n)
+end = start*(1 + rate/100)**n
 
 print("Po {} latach kapitał będzie wynosił {} zł".format(n, end))
